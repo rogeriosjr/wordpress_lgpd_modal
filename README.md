@@ -10,13 +10,6 @@ Ele é totalmente configurável. Texto, Cores dos textos, posição e cores dos 
 cor e opacidade da modal e do container.
 
 
-## Referência
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
 ## Autores
 
 - [@rogeriosjr](https://www.github.com/rogeriosjr)
