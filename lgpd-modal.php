@@ -24,7 +24,7 @@ register_activation_hook(__FILE__, function() {
     $tableName = $wpdb->prefix . 'posts'; // Table name
     $siteurl   = get_option('siteurl'); // Busca a URL do site
 
-    $file      = WP_PLUGIN_DIR . '/lgpd-modal/lgpd-page.txt';
+    $file      = WP_PLUGIN_DIR . '/wordpress_lgpd_modal/lgpd-page.txt';
     $handle    = fopen($file, 'r');
     $contents  = fread($handle, filesize($file));
     $contents  = str_replace('%URLSITE%',$siteurl, $contents);
@@ -88,10 +88,10 @@ add_action( 'updated_option', function() {
 
     if(isset($_POST['submit'])) {
         
-        $file_model     = WP_PLUGIN_DIR . '/lgpd-modal/css/modal-style.txt'; 
+        $file_model     = WP_PLUGIN_DIR . '/wordpress_lgpd_modal/css/modal-style.txt'; 
         $handle_model   = fopen($file_model, 'r');
         
-        $file           = WP_PLUGIN_DIR . '/lgpd-modal/css/modal-style.css';
+        $file           = WP_PLUGIN_DIR . '/wordpress_lgpd_modal/css/modal-style.css';
         $handle_file    = fopen($file, 'w');
         
         if($handle_model) {
