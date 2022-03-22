@@ -1,0 +1,92 @@
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 99999999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden;
+  background-color: %backgroundColorModal%;
+}
+
+.modal-content-lgpd {
+  position: fixed;
+  background-color: #fefefe;
+  bottom: 0;
+  margin: auto;
+  padding: 40px 20px;
+  width:100%;
+  background-color: %backgroundColorContent%;
+  color: %fontColorContent%;
+}
+.modal-content-lgpd a {
+    color: %fontColorContent%;
+}
+
+.close-modal-lgpd {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #aaaaaa;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.close-modal-lgpd:hover,
+.close-modal-lgpd:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.div-buttons {
+    text-align: %alignButtons%;
+}
+
+.lgpd-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.lgpd-btn-danger {
+    color: %colorTextButtons%;
+    background-color: %backgroundBtnDanger%;
+    border-color: %backgroundBtnDanger%;
+}
+
+.lgpd-btn-success {
+    color: %colorTextButtons%;
+    background-color: %backgroundBtnSuccess%;
+    border-color: %backgroundBtnSuccess%;
+}
+
+@media screen and (min-width: 220px) and (max-width: 319px) {
+    .modal-content-lgpd {
+        padding: 30px 6px;
+        width:100%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 63.9375em) {
+    .modal-content-lgpd {
+        padding: 30px 10px;
+        width:100%;
+    }
+}
