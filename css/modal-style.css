@@ -7,7 +7,7 @@
   width: 100%; 
   height: 100%; 
   overflow: hidden;
-  background-color: rgba(13,13,13, 0.29);
+  background-color: rgba(0,0,0, 0.87);
 }
 
 .modal-content-lgpd {
@@ -17,7 +17,7 @@
   margin: auto;
   padding: 40px 20px;
   width:100%;
-  background-color: #59c1ef;
+  background-color: #20cf55;
   color: #ffffff;
 }
 .modal-content-lgpd a {
@@ -74,8 +74,8 @@
 
 .lgpd-btn-success {
     color: #ffffff;
-    background-color: #41983e;
-    border-color: #41983e;
+    background-color: #41a53e;
+    border-color: #41a53e;
 }
 
 @media screen and (min-width: 220px) and (max-width: 319px) {

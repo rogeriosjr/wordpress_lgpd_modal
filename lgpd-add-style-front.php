@@ -19,7 +19,7 @@ function lgpd_add_style()
     $backgroundBtnDanger    = $configuracoes['LGPD_background_buttons_rejeitar'];
     $backgroundBtnSuccess   = $configuracoes['LGPD_background_buttons_aceitar'];
     
-    $dir_plugin             = WP_PLUGIN_URL . '/wordpress_lgpd_modal';
+    $dir_plugin             = WP_PLUGIN_URL . '/' . LGPD_PASTA;
 
     $style = "<link rel='stylesheet' id='lgpd-modal-plugin-css'  href='".$dir_plugin."/css/modal-style.css' type='text/css' media='all' />";
 

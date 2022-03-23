@@ -10,6 +10,8 @@
 
 // Define constante de versão requerida
 define('REQUIRE_VERSION', '4.0.0');
+//define('PL_PASTA', 'plugin-lgpd-wordpress-3xceler');
+define('LGPD_PASTA', 'lgpd-modal');
 
 // Função chamada pelo wp no momento de ativação (caminho, função_de_callback)
 register_activation_hook(__FILE__, function() {
@@ -24,7 +26,7 @@ register_activation_hook(__FILE__, function() {
     $tableName = $wpdb->prefix . 'posts'; // Table name
     $siteurl   = get_option('siteurl'); // Busca a URL do site
 
-    $file      = WP_PLUGIN_DIR . '/wordpress_lgpd_modal/lgpd-page.txt';
+    $file      = WP_PLUGIN_DIR . '/'.LGPD_PASTA.'/lgpd-page.txt';
     $handle    = fopen($file, 'r');
     $contents  = fread($handle, filesize($file));
     $contents  = str_replace('%URLSITE%',$siteurl, $contents);
@@ -44,7 +46,7 @@ register_deactivation_hook(__FILE__, function()
     global $wpdb;
     $tableName  = $wpdb->prefix . 'posts';
     
-    $file       = fopen(WP_PLUGIN_DIR . '/lgpd_inaticve_log.txt', 'a');
+    $file       = fopen(WP_PLUGIN_DIR . '/'.LGPD_PASTA.'/lgpd_inaticve_log.txt', 'a');
     $linha      = 'O plugin foi desativado com sucesso!\nData da desativação: ' . date("d/m/Y H:m:i");
     fwrite($file, $linha);
     fclose($file);
@@ -86,12 +88,12 @@ add_action( 'updated_option', function() {
     
     $backgroundModal = hex2RGBA($dadosModal['LGPD_background_modal'], $dadosModal['LGPD_modal_transparent']);
 
-    if(isset($_POST['submit'])) {
+    if(isset($_POST['LGPD_dados_registro'])) {
         
-        $file_model     = WP_PLUGIN_DIR . '/wordpress_lgpd_modal/css/modal-style.txt'; 
+        $file_model     = WP_PLUGIN_DIR . '/'.LGPD_PASTA.'/css/modal-style.txt'; 
         $handle_model   = fopen($file_model, 'r');
         
-        $file           = WP_PLUGIN_DIR . '/wordpress_lgpd_modal/css/modal-style.css';
+        $file           = WP_PLUGIN_DIR . '/'.LGPD_PASTA.'/css/modal-style.css';
         $handle_file    = fopen($file, 'w');
         
         if($handle_model) {
